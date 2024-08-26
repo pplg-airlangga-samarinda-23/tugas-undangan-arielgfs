@@ -1,0 +1,105 @@
+
+header h1 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 334;
+    font-style: normal;
+    color: azure;
+}
+
+.nama {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow: hidden;
+    height: 100%; 
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background-image: url('bg.png');
+    background-position: top center; /* Sesuaikan bagian gambar yang ingin ditampilkan */
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+header h1 {
+    position: absolute;
+    bottom: 390px;
+    left: 38%;
+}
+
+.nama {
+    position: absolute;
+    bottom: 150px;
+    left: 38.5%;
+    color: azure;
+    text-align: center;
+}
+
+.underline {
+    position: absolute;
+    bottom: 140px;
+    left: 38%;
+    color: azure;
+    text-align: center;
+}
+
+.tanggal {
+    position: absolute;
+    bottom: 80px;
+    left: 41.5%;
+    margin: 20px 0;    
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 202;
+    font-style: normal;
+    color: azure;
+    text-align: center;
+}
+
+img {
+    position: absolute;
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    bottom: 200px;
+    left: 42%;
+}
+
+.next {
+    position: absolute;
+    bottom: 70px;
+    left: 41.6%;
+    text-align: center;
+    
+}
+
+.next a {
+    text-decoration: none;
+    color: azure;
+    font-size: 24px;
+    margin: 0 15px;
+    transition: all 2s ease;
+}
+
+.next a:hover {
+    color: #d7c012;
+}
+

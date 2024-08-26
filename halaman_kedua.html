@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wedding adam & ytta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="profil"> 
+            <img src="small-flower-close-up-1373255.jpg">
+            <h1>Cowo</h1>
+            <h1>  & </h1>
+            <h1>Cewe</h1>
+        </div>
+    </header>
+    <div id="Kata pengantar" class="section">
+        <h2>Kata Pengantar</h2>
+        <p>adam nikah ygy</p>
+        <audio src="Seeing the Unseen.mp3" loop autoplay></audio>
+    </div>
+    <div class="carousel">
+        <div class="carousel-inner">
+            <img src="small-flower-close-up-1373255.jpg" alt="Image 1" class="active">
+            <img src="flower-1-1361711.jpg" alt="Image 2">
+            <img src="flower-up-close-1177972.jpg" alt="Image 3">
+        </div>
+        <button class="prev">Prev</button>
+        <button class="next">Next</button>
+    </div>
+    <div id="Biodata" class="section">
+        <h2>Lokasi Dan Tanggal</h2>
+        <p>Monas - JAKARTA</p>
+        <div style="width: 100%"><iframe width="40%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Merdeka%20Square,%20Jalan%20Lapangan%20Monas,%20Gambir,%20Kecamatan%20Gambir,%20Kota%20Jakarta%20Pusat,%20Daerah%20Khusus%20Ibukota%20Jakarta%2010110+(My%20Business%20Name)&amp;t=k&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps devices</a></iframe></div>
+        <p>Tanggal : 25-12-2024</p>
+    </div>
+    <footer id="Kontak" class="section">
+        <h2>Kontak</h2>
+        <p>No telp: 0853.4841.2313</p>
+        <p>email: johanngiven@gmail.com</p>
+        <p>Instagram: <a href="https://www.instagram.com/arielgfs/">@arielgfs</a></p>
+    </footer>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const carousel = document.querySelector('.carousel')
+        const images = carousel.querySelectorAll('img');
+        const prevBtn = carousel.querySelector('.prev');
+        const nextBtn = carousel.querySelector('.next');
+        let currentIndex = 0;
+    
+        function showImage(index) {
+            images[currentIndex].classList.remove('active');
+            images[index].classList.add('active');
+            currentIndex = index
+        }
+
+        prevBtn.addEventListener('click', function (){
+            let index = currentIndex - 1;
+            if (index < 0) index = images.length -1;
+            showImage(index)
+        });
+
+        nextBtn.addEventListener('click', function (){
+            let index = currentIndex + 1;
+            if (index >= images.length) index = 0;
+            showImage(index)
+        });
+
+        function prevImage() {
+            let index = currentIndex - 1;
+            if (index < 0) index = images.length - 1;
+            showImage(index);
+        }
+
+        function nextImage() {
+            let index = currentIndex + 1;
+            if (index >- images.length) index -0;
+            showImage(index);
+        }
+
+        prevBtn.addEventListener('click', function() {
+            prevImage();
+        });
+
+        nextBtn.addEventListener('click', function() {
+            nextImage();
+        });
+
+        let intervalId;
+
+        function startAutoSlide() {
+            intervalId = setInterval(nextImage, 3000);
+        }
+
+        startAutoSlide();
+    });
+    </script>
+</html>
